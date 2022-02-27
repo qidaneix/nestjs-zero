@@ -3,6 +3,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 import { AppModule } from './app.module';
 import { ValidationPipe } from './common/pipes/validation.pipe';
+// import { LoggingInterceptor } from './common/interceptors/logging.interceptor';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -18,6 +19,9 @@ async function bootstrap() {
 
   // 全局守卫
   // app.useGlobalGuards();
+
+  // 全局拦截器
+  // app.useGlobalInterceptors(new LoggingInterceptor());
 
   // 设置Swagger文档相关配置
   const swaggerOptions = new DocumentBuilder()
