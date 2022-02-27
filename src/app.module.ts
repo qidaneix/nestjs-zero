@@ -14,6 +14,7 @@ import { EmailModule } from './modules/email/email.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { UsersModule } from './modules/users/users.module';
 import { TasksModule } from './modules/tasks/tasks.module';
+import { AudioModule } from './jobs/audio/audio.module';
 
 @Module({
   imports: [
@@ -35,6 +36,7 @@ import { TasksModule } from './modules/tasks/tasks.module';
     AuthModule,
     UsersModule,
     TasksModule,
+    AudioModule,
   ],
 })
 export class AppModule {
