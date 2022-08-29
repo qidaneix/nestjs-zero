@@ -5,8 +5,8 @@ export default {
   host: 'localhost',
   port: 3306,
   username: 'root',
-  password: '12345678',
-  database: 'nestjs_zero',
+  password: '123456',
+  database: 'phpmyadmin',
   entities: [join(__dirname, '../', '**/**.entity.{ts,js}')],
   synchronize: true,
 };

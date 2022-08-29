@@ -9,13 +9,13 @@ import { statusMonitorConfig } from './config/statusMonitor';
 import { LoggerMiddleware } from './common/middleware/logger.middleware';
 import { HelloModule } from './modules/hello/hello.modules';
 import { ExceptionModule } from './modules/exception/exception.module';
-import { RoleGuardModule } from './modules/role-guard/role-guard.module';
 import { EmailModule } from './modules/email/email.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { UsersModule } from './modules/users/users.module';
 import { TasksModule } from './modules/tasks/tasks.module';
 import { AudioModule } from './jobs/audio/audio.module';
 import { AlbumModule } from './modules/album/album.module';
+import { TypeormModule } from './modules/typeorm/typeorm.module';
 
 @Module({
   imports: [
@@ -32,13 +32,13 @@ import { AlbumModule } from './modules/album/album.module';
     ScheduleModule.forRoot(),
     HelloModule,
     ExceptionModule,
-    RoleGuardModule,
     EmailModule,
     AuthModule,
     UsersModule,
     TasksModule,
     AudioModule,
     AlbumModule,
+    TypeormModule,
   ],
 })
 export class AppModule {
